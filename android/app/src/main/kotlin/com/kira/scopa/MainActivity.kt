@@ -1,4 +1,4 @@
-package com.example.scopa
+package com.kira.scopa
 
 import io.flutter.embedding.android.FlutterActivity
 
