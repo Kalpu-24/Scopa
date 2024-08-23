@@ -33,4 +33,28 @@ final ThemeData darkTheme = ThemeData(
     backgroundColor: Colors.white,
     elevation: 0,
   )),
+
+  // Text Form Field Theme
+  inputDecorationTheme: const InputDecorationTheme(
+    focusColor: Colors.white,
+    labelStyle: TextStyle(color: Colors.white),
+    filled: false,
+    border: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.white),
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.white),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.white),
+    ),
+    hintStyle: TextStyle(color: Colors.white),
+  ),
+
+  // Text Theme
+  textTheme: const TextTheme(
+    displaySmall: TextStyle(
+      color: Colors.white,
+    ),
+  ),
 );

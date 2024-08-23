@@ -32,4 +32,26 @@ final ThemeData lightTheme = ThemeData(
       elevation: 0,
     ),
   ),
+
+  inputDecorationTheme: const InputDecorationTheme(
+    focusColor: Colors.black,
+    labelStyle: TextStyle(color: Colors.black),
+    filled: false,
+    border: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.black),
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.black),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.black),
+    ),
+    hintStyle: TextStyle(color: Colors.black),
+  ),
+
+  textTheme: const TextTheme(
+    displaySmall: TextStyle(
+      color: Colors.white,
+    ),
+  ),
 );
