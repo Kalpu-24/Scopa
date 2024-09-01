@@ -35,20 +35,20 @@ final ThemeData darkTheme = ThemeData(
   )),
 
   // Text Form Field Theme
-  inputDecorationTheme: const InputDecorationTheme(
-    focusColor: Colors.white,
-    labelStyle: TextStyle(color: Colors.white),
-    filled: false,
+  inputDecorationTheme: InputDecorationTheme(
     border: OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.white),
-    ),
+        borderSide: const BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(50)),
     enabledBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.white),
-    ),
+        borderSide: const BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(50)),
     focusedBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.white),
-    ),
-    hintStyle: TextStyle(color: Colors.white),
+        borderSide: const BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(50)),
+    disabledBorder: OutlineInputBorder(
+        borderSide: const BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(50)),
+    hintStyle: const TextStyle(color: Colors.white),
   ),
 
   // Text Theme

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:scopa/pages/game_page.dart';
 import 'package:scopa/pages/home_page.dart';
 import 'package:scopa/themes/theme_manager.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ThemeManager().getPrefs();
-  runApp(const MainApp());
+  // runApp(const MainApp());
+  runApp(const GamePage());
 }
 
 class MainApp extends StatefulWidget {

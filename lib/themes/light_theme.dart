@@ -33,20 +33,20 @@ final ThemeData lightTheme = ThemeData(
     ),
   ),
 
-  inputDecorationTheme: const InputDecorationTheme(
-    focusColor: Colors.black,
-    labelStyle: TextStyle(color: Colors.black),
-    filled: false,
+  inputDecorationTheme: InputDecorationTheme(
     border: OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.black),
-    ),
+        borderSide: const BorderSide(color: Colors.black),
+        borderRadius: BorderRadius.circular(50)),
     enabledBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.black),
-    ),
+        borderSide: const BorderSide(color: Colors.black),
+        borderRadius: BorderRadius.circular(50)),
     focusedBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.black),
-    ),
-    hintStyle: TextStyle(color: Colors.black),
+        borderSide: const BorderSide(color: Colors.black),
+        borderRadius: BorderRadius.circular(50)),
+    disabledBorder: OutlineInputBorder(
+        borderSide: const BorderSide(color: Colors.black),
+        borderRadius: BorderRadius.circular(50)),
+    hintStyle: const TextStyle(color: Colors.black),
   ),
 
   textTheme: const TextTheme(
