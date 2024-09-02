@@ -1,4 +1,5 @@
 import 'package:flame/components.dart';
+import 'package:scopa/game/components/card_component.dart';
 
 class OpponentCards extends PositionComponent {
   OpponentCards(
@@ -14,4 +15,17 @@ class OpponentCards extends PositionComponent {
 
   @override
   bool get debugMode => true;
+
+  @override
+  void onLoad() {
+    for (int i = 0; i < 3; i++) {
+      final card = CardComponent(
+        size: cardSize,
+        cardIndex: i,
+        position: Vector2(width - cardSize.x - (i * (cardSize.x + cardGap)), 0),
+      );
+      add(card);
+    }
+    super.onLoad();
+  }
 }

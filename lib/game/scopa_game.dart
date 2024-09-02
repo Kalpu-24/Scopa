@@ -1,9 +1,9 @@
 import 'dart:async';
-import 'dart:ui';
 import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
+import 'package:scopa/game/components/card_component.dart';
 import 'package:scopa/game/components/mycards.dart';
 import 'package:scopa/game/components/opponent.dart';
 
@@ -35,24 +35,23 @@ class ScopaGame extends FlameGame {
     double cardHeight = cardWidth * (1 / cardAspectRatio);
     const double cardGap = 10;
     Vector2 cardSize = Vector2(cardWidth, cardHeight);
-    const double nameTextHeight = 20;
     await Flame.images.load('klondike-sprites.png');
 
     final myCards = MyCards(
         cardSize: cardSize,
         cardGap: cardGap,
         cardAspectRatio: cardAspectRatio,
-        size: Vector2(width / 1.1, cardHeight + 20 + nameTextHeight),
+        size: Vector2(width / 1.1, cardHeight),
         // position as center of width
         position: Vector2((width / 2) - ((width / 1.1) / 2),
-            height - cardHeight - 20 - nameTextHeight - cardGap * 2));
+            height - cardHeight - cardGap * 2));
     add(myCards);
 
     final opponentCards = OpponentCards(
         cardSize: cardSize,
         cardGap: cardGap,
         cardAspectRatio: cardAspectRatio,
-        size: Vector2(width / 1.1, cardHeight + 20 + nameTextHeight),
+        size: Vector2(width / 1.1, cardHeight),
         // position as center of width
         position:
             Vector2((width / 2) - ((width / 1.1) / 2), height * 10 / 100));
@@ -86,24 +85,5 @@ class ScopaGame extends FlameGame {
       add(card);
     }
     super.onLoad();
-  }
-}
-
-class CardComponent extends PositionComponent {
-  final int cardIndex;
-  CardComponent(
-      {required this.cardIndex,
-      required Vector2 size,
-      required Vector2 position})
-      : super(size: size, position: position);
-
-  @override
-  void render(Canvas canvas) {
-    super.render(canvas);
-  }
-
-  @override
-  void update(double dt) {
-    super.update(dt);
   }
 }
