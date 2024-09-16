@@ -20,9 +20,12 @@ class OpponentCards extends PositionComponent {
   void onLoad() {
     for (int i = 0; i < 3; i++) {
       final card = CardComponent(
-        size: cardSize,
+        cardSize: cardSize,
         cardIndex: i,
         position: Vector2(width - cardSize.x - (i * (cardSize.x + cardGap)), 0),
+        intRank: 1,
+        intSuit: 3,
+        faceUp: false,
       );
       add(card);
     }

@@ -81,9 +81,22 @@ class ScopaGame extends FlameGame {
       final xPos = startX + (column * (cardWidth + cardGap));
       final yPos = startY + (row * (cardHeight + cardGap));
       final card = CardComponent(
-          cardIndex: i, size: cardSize, position: Vector2(xPos, yPos));
+          cardIndex: i,
+          cardSize: cardSize,
+          position: Vector2(xPos, yPos),
+          intRank: 1,
+          intSuit: 1,
+          faceUp: true);
       add(card);
     }
     super.onLoad();
   }
+}
+
+Sprite klondikeSprite(double x, double y, double width, double height) {
+  return Sprite(
+    Flame.images.fromCache('klondike-sprites.png'),
+    srcPosition: Vector2(x, y),
+    srcSize: Vector2(width, height),
+  );
 }

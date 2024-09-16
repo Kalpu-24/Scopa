@@ -1,7 +1,6 @@
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 import 'package:scopa/game/components/card_component.dart';
-import 'package:scopa/game/components/name_text_box_component.dart';
 
 class MyCards extends PositionComponent {
   MyCards(
@@ -22,9 +21,12 @@ class MyCards extends PositionComponent {
   void onLoad() {
     for (int i = 0; i < 3; i++) {
       final card = CardComponent(
-        size: cardSize,
+        cardSize: cardSize,
         cardIndex: i,
         position: Vector2(i * (cardSize.x + cardGap), 0),
+        intRank: 1,
+        intSuit: 0,
+        faceUp: true,
       );
       add(card);
     }
